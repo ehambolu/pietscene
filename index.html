@@ -1,41 +1,76 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-	    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+	    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js">
+	  </script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
 
   </head>
   <body>
  <a-scene background="color: #ECECEC" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
 	 
-<a-box id="top corner box" position="-1.401 5.278 -5.698" rotation="90 180 90" color="black" shadow="" material="" geometry="height: 0.2; width: 0.4"></a-box>
+<a-box id="top corner box" position="-1.401 5.278 -5.698" rotation="90 180 90" color="black" shadow="" material="" geometry="height: 0.2; width: 0.4"
+		  event-set__enter="_event: mouseenter; _target: #blackboxtext; visible: true"
+          event-set__leave="_event: mouseleave; _target: #blackboxtext; visible: false">
+        <a-text id="blackboxtext" value="From a very young age, Piet Mondrian was exposed to art. His father was a qualified art instructor and his uncle was an artist." align="center" color="#FFF" visible="false" position="-1 1 -.99" rotation="0 270 90"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>
 	 
 <a-box id="middle short" position="-2.56922 3.78707 -5.82297" rotation="0 90 180" color="black" shadow="" material="" geometry="height: 0.2; width: 0.4" visible="" animation="property: material.color;
-from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000"></a-box>
+from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000" ></a-box>
 		   
-<a-box id="big yellow" position="1.0333 4.86068 -5.42734" rotation="0 90 180" shadow="" material="color: #c5d926" geometry="depth: 1.67; height: 2.08; width: 0.4" visible=""animation="property: material.color;from: #c5d926;to: #663399;loop: true; dir: alternate; dur: 7500" ></a-box>
+<a-box id="big yellow" position="1.0333 4.86068 -5.42734" rotation="0 90 180" shadow="" material="color: #c5d926" geometry="depth: 1.67; height: 2.08; width: 0.4" visible=""animation="property: material.color;from: #c5d926;to: #663399;loop: true; dir: alternate; dur: 7500"    
+	   event-set__enter="_event: mouseenter; _target: #yellowtextbox; visible: true"
+       event-set__leave="_event: mouseleave; _target: #yellowtextbox; visible: false">
+        <a-text id="yellowtextbox" value="After WW1, Mondrian returned to Paris and he began to produce the grid-based abstract paintings for which he is best known." align="center" color="#FFF" visible="false" position="2 -1 -2" rotation="0 90 180"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>
 	 
-<a-box id="bottom across " position="-0.147 1.66256 -5.69759" rotation="0 90 180" color="#000000" shadow="" material="" geometry="depth: 5.51; height: 0.2; width: 0.4" visible=""animation="property: material.color; from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000" ></a-box>
+<a-box id="bottom across " position="-0.147 1.66256 -5.69759" rotation="0 90 180" color="#000000" shadow="" material="" geometry="depth: 5.51; height: 0.2; width: 0.4" visible=""animation="property: material.color; from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000"  
+	   event-set__enter="_event: mouseenter; _target: #acrossbar; visible: true"
+       event-set__leave="_event: mouseleave; _target: #acrossbar; visible: false">
+        <a-text id="acrossbar" value="Mondrian left Paris in 1938 to escape the inevitable advance of the Nazis. He moved to London and then to Manhattan." align="center" color="#FFF" visible="false" position="2 -1 5" rotation="0 90 180"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>
 	 
 <a-box id="bottom bar" position=".497 0.50812 -5.69759" rotation="0 90 180" color="#000000" shadow="" material="" geometry="depth: 2.870; height: 0.2; width: 0.4" visible="" ></a-box>
 	 
 <a-box id="half bar" position="1.01148 3.15176 -5.69759" rotation="90 90 180" color="#000000" shadow="" material="" geometry="depth: 1.36; height: 0.2; width: 0.4" visible="" ></a-box>	 
 	 
 <a-box id="short across 3" position="0.99674 2.5731 -5.69759" rotation="0 90 180" color="#000000" shadow="" material="" geometry="depth: 1.8; height: 0.2; width: 0.4" visible="" animation="property: material.color;
-from: #000000;to: #00ff00;loop: true; dir: alternate; dur: 6000"></a-box>	 
+from: #000000;to: #00ff00;loop: true; dir: alternate; dur: 6000"
+	   event-set__enter="_event: mouseenter; _target: #shortarossgreen; visible: true"
+       event-set__leave="_event: mouseleave; _target: #shortarossgreen; visible: false">
+        <a-text id="shortarossgreen" value="In perfect alignment with his contribution to modern abstract art, the name Piet Mondrian is an anagram for “I paint modern." align="center" color="#FFF" visible="false" position="1.5 -1 5" rotation="0 90 180"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>	 
 	 
 <a-box id="under yellow bar" position="1.02169 3.78099 -5.56111" rotation="0 90 180" color="#000000" shadow="" material="" geometry="depth: 1.8; height: 0.2; width: 0.88" visible="" animation="property: material.color;
-from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000"></a-box>	 
+from: #000000;to: #00ccff;loop: true; dir: alternate; dur: 6000" 
+	   event-set__enter="_event: mouseenter; _target: #yellowunderbar; visible: true"
+       event-set__leave="_event: mouseleave; _target: #yellowunderbar; visible: false">
+        <a-text id="yellowunderbar" value="Piet Mondrian died on 1st February 1944. He had pneumonia." align="center" color="#FFF" visible="false" position="1 -1 5" rotation="0 90 180"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>	 
 	 
 <a-box id="vertical black 2" position=".163  3.176 -5.7543" rotation="90 180 90" color="black" shadow="" material="" geometry="depth: 5.3; height: 0.2; width: 0.4" visible="" ></a-box>	 
 	 
-<a-box id="vertical black 3" position="1.814 3.124 -5.73782" rotation="90 180 90" color="black" shadow="" material="" geometry="depth: 5.3; height: 0.2; width: 0.4" visible=""  ></a-box>
+<a-box id="vertical black 3" position="1.814 3.124 -5.73782" rotation="90 180 90" color="black" shadow="" material="" geometry="depth: 5.3; height: 0.2; width: 0.4" visible="" 	  
+	   event-set__enter="_event: mouseenter; _target: #blackboxxx; visible: true"
+       event-set__leave="_event: mouseleave; _target: #blackboxxx; visible: false">
+        <a-text id="blackboxxx" value="Mondrian returned to the Netherlands  during WWI. He met artist Bart van der Leck, who only used primary colours in his paintings. Mondrian started to develop his own painting theory and style." align="center" color="#FFF" visible="false" position="-1 3 -1" rotation="0 270 90"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>
 	 
 <a-box id="long black across 1" position="-0.610 5.229 -5.79937" rotation="0 90 0" color="black" shadow="" material="" geometry="depth: 5; height: 0.2; width: 1.480" visible=""  animation="property: material.color;
-from: #000000;to: #00ff00;loop: true; dir: alternate; dur: 6000"></a-box>
+from: #000000;to: #00ff00;loop: true; dir: alternate; dur: 6000" 
+	   event-set__enter="_event: mouseenter; _target: #middleshortblack; visible: true"
+       event-set__leave="_event: mouseleave; _target: #middleshortblack; visible: false">
+        <a-text id="middleshortblack" value="Mondrian moved to Paris in 1911. He was  influenced by the Cubist style of Picasso and Braque, this caused his work started to incorporate more geometric shapes." align="center" color="#FFF" visible="false" position="-1 1.2 1" rotation="0 270 0"
+                geometry="primitive: plane; width: 6" material="color: #000000"></a-text></a-box>
 
-<a-entity id="red box" geometry="depth: 2.6; height: 2.2; width: 1" material="color: #ff0000" shadow="" rotation="90 90 0 "position="-0.982 3.853 -5.533"animation="property: material.color;from: #ff0000;to: #000000;loop: true; dir: alternate; dur: 7500" ></a-entity>
+<a-entity id="red box" geometry="depth: 2.6; height: 2.2; width: 1" material="color: #ff0000" shadow="" rotation="90 90 0 "position="-0.982 3.853 -5.533"animation="property: material.color;from: #ff0000;to: #000000;loop: true; dir: alternate; dur: 7500"      
+		  event-set__enter="_event: mouseenter; _target: #redboxtext; visible: true"
+          event-set__leave="_event: mouseleave; _target: #redboxtext; visible: false">
+        <a-text id="redboxtext" value=" Welcome to the Piet Mondrian Fact Game. Move the cursor around the pieces to find all 10 facts! The first one is free. Piet Mondrian was born on 7th March 1872 in Amersfoort, the Netherlands." align="center" color="#FFF" visible="false" position="-2 1 -2" rotation="0 270 90"
+                geometry="primitive: plane; width: 6" material="color: #000"></a-text>
+	</a-entity>
 	 
-<a-entity id="black box" geometry="depth: 1.3; height: 1.3; width: 1.2" material="color: black" shadow="" position="-1.48531 1.884 -5.54229" rotation="90 0 0"></a-entity>
+<a-entity id="black box" geometry="depth: 1.3; height: 1.3; width: 1.2" material="color: black" shadow="" position="-1.48531 1.884 -5.54229" rotation="90 0 0"> </a-entity>
 	 
 <a-entity id="blue box" geometry="depth: 0; height: 0; width: 1.56" material="color: #0000ff" shadow="" position="0.96298 1.06596 -5.33383" rotation=""animation="property: material.color;from: #0000ff;to: #00ff00;loop: true; dir: alternate; dur: 6000" ></a-entity>
 	 
@@ -43,25 +78,32 @@ from: #000000;to: #00ff00;loop: true; dir: alternate; dur: 6000"></a-box>
 
 <a-entity id="short black" geometry="depth: 0.5; height: 0.8" material="color: #000000" shadow="" position="-0.44025 0.82883 -5.65803" rotation="90 0 0"></a-entity>	 
 	 
-<a-entity id="small yellow house"  geometry="depth: 1.27; height: 0.3" position="-2.65073 1.03059 -5.80118" rotation="90 0 0" material="color: #c5d926" shadow="" animation="property: material.color;from: #c5d926;to: #663399;loop: true; dir: alternate; dur: 7500"></a-entity>
+<a-entity id="small yellow house"  geometry="depth: 1.27; height: 0.3" position="-2.65073 1.03059 -5.80118" rotation="90 0 0" material="color: #c5d926" shadow="" animation="property: material.color;from: #c5d926;to: #663399;loop: true; dir: alternate; dur: 7500" 
+		  event-set__enter="_event: mouseenter; _target: #syellowhouse; visible: true"
+          event-set__leave="_event: mouseleave; _target: #syellowhouse; visible: false">
+        <a-text id="syellowhouse" value="Piet Mondrian became a primary school teacher and he painted in his spare time." align="center" color="#FFF" visible="false" position="-2.5 2 -3" rotation="270 90 270"
+                geometry="primitive: plane; width: 6" material="color: #000"></a-text>
+	 </a-entity>
 	 
 <a-entity light="intensity: 0.6; castShadow: true" position="-0.5 1 1" data-aframe-default-light="" aframe-injected="" visible=""></a-entity>
 
 	 
 <a-entity light="color: #BBB; type: ambient" data-aframe-default-light="" aframe-injected="" visible=""></a-entity>	 
 
-<a-entity camera="" position="-0.01 4 0.4" wasd-controls="" rotation="-7.333859777674538 -2.5210142985756283 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" visible=""></a-entity> 
+<a-entity camera="" position="-0.01 4 0.4" wasd-controls="" rotation="-7.333859777674538 -2.5210142985756283 0" look-controls="" aframe-injected="" data-aframe-inspector-original-camera="" visible="" animation="property: rotation; to: 0 0 360; loop: true; dur: 0" >  <a-cursor></a-cursor></a-entity> 
 		  
-<a-plane id="back wall" position="-.027 3.352 -6.014" rotation="0 0 0" height="6" width="8" color="#f5f5f5" ></a-plane>
-		  
-<a-plane id="floor" position="-.098 .349 -4.03" rotation="-90 0 0" width="8" height="12" color="#445" shadow="" material="" geometry=""></a-plane>
+
+<a-plane id="floor" position="-.098 .349 -4.03" rotation="-90 0 0" width="8" height="12" color="#445" shadow="" material="" geometry=""  
+		 event-set__enter="_event: mouseenter; _target: #planetext; visible: true"
+          event-set__leave="_event: mouseleave; _target: #planetext; visible: false">
+        <a-text id="planetext" value=" Pieter Cornelis Mondriaan was a Dutch painter and theoretician. He is known for being one of the pioneers of 20th century abstract art." align="center" color="#FFF" visible="false" position="-.2 -1 1" rotation="90 90 90"
+                geometry="primitive: plane; width: 6" material="color: #000"></a-text>
+	</a-plane>
 
 <a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>	  
 	  
-<a-plane position="3.99754 2.6 -4.2" rotation="0 -90 0" width="12.4" height="7.5" color="#7BC8A4" shadow="" material="color: #white" geometry="" id="right wall"></a-plane>
-	 
-	 
-	  
+
+
 	  
 </a-scene> 
 	</body>
